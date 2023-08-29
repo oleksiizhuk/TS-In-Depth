@@ -1,10 +1,10 @@
 // создает новый тип на базе старого типа
 
-type Book = {
+type BookPick = {
     title: string;
     author: string;
     copies: string;
     year: string;
 };
 
-type BookWithTitleAndAututhor = Pick<Book, 'title'>;
+type BookWithTitleAndAuthor = Pick<BookPick, 'title'>;

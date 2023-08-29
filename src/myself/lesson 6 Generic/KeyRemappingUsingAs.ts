@@ -3,6 +3,6 @@ type Book = {
     author: string;
 };
 
-type Getters<Type> = {
-    [K in keyof Type ]
-};
+// type Getters<Type> = {
+//     [K in keyof Type ]
+// };

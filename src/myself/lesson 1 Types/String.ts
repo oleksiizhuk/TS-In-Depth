@@ -1,4 +1,4 @@
 let color: string = 'blue';
 color = 'red';
 
-const user: string = 'Oleksii';
+const user: string = 'User';

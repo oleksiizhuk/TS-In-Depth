@@ -1,6 +1,6 @@
 // делает все поля обезательными
 
-interface Person {
+interface Person1 {
     age?: number;
     id: number;
     location?: string;
@@ -8,7 +8,7 @@ interface Person {
 }
 
 
-const p1: Person = { // OK
+const p1: Person1 = { // OK
     id: 1,
     name: 'Anna'
 };

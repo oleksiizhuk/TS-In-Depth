@@ -1,4 +1,2 @@
-
-
-const id = Symbol('New Symbol');
-console.log(id.description); // New Symbol
+const ids = Symbol('New Symbol');
+console.log(ids.description); // New Symbol

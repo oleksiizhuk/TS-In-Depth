@@ -29,8 +29,8 @@ abstract class ReferenceItem3 {
     static department: string = 'Classical dep.';
     printTitle (): void {
         console.log(`${this.title} was published in year`, this.year);
-        console.log(`Department: ${ReferenceItem.department}`);
-        console.log(`Department: ${ReferenceItem.department}`);
+        console.log(`Department: ${ReferenceItem3.department}`);
+        console.log(`Department: ${ReferenceItem3.department}`);
         console.log(`Department: ${Object.getPrototypeOf(this).constructor.department}`);
 
     }

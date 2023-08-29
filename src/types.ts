@@ -34,6 +34,6 @@ type RemoveProps <T extends object, TProps extends keyof T> = {
     [prop in keyof T as Exclude<prop, TProps>]: T[prop]
 };
 
-type BookRequiredPropsType = RemoveProps<Book, BookOptionalProps>;
-type BookOptionalPropsType = RemoveProps<Book, BookOptionalProps>;
+type BookRequiredPropsType = RemoveProps<Book, 'title'>;
+type BookOptionalPropsType = RemoveProps<Book, keyof BookOptionalProps>;
 

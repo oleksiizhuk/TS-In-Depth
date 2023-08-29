@@ -8,7 +8,8 @@ interface Person {
 }
 
 type PartialPerson = Partial<Person>;
-interface PartialPerson {
+
+interface IPartialPerson {
     [id]?: number;
     name?: string;
     age?: number;

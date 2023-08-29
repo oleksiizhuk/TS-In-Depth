@@ -1,11 +1,11 @@
-// enum Category { JavaScript, CSS, HTML }
-// enum Category { JavaScript = 1, CSS, HTML }
-enum Category { JavaScript = 5, CS8= 8, HTML = 9 }
+enum Category1 { JavaScript, CSS, HTML }
+enum Category2 { JavaScript = 1, CSS, HTML }
+enum Category3 { JavaScript = 5, CS8= 8, HTML = 9 }
 
-let favoriteCategory: Category = Category.JavaScript;
+let favoriteCategory: Category3 = Category3.JavaScript;
 console.log(favoriteCategory); // 5
 
-let categoryString = Category[favoriteCategory];
-console.log(categoryString); // JavaScript
 
 enum CategoryString { A = 'JavaScript', B = 'Css', C = 'HTML'}
+let categoryString = Category3[favoriteCategory];
+console.log(categoryString); // JavaScript
