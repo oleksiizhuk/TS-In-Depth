@@ -17,7 +17,7 @@ export type Book = {
     category: Category;
     author: string;
     available: boolean;
-    test?: string
+    test?: string;
 };
 function getAllBooks(): Book[] {
     const books: Book[] = [

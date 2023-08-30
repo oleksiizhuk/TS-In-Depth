@@ -17,6 +17,7 @@
 - [object Object](object%20Object.ts)
 - [Undefined and Null](Undefined%20and%20Null.ts)
 - [Never](Never.ts)
+- [Void](Void.ts)
 - [Type Aliases](Type%20Aliases.ts)
 - Literal Type
   - [String Literal Type.](Literal%20Type%2FString%20Literal%20Type.ts)
