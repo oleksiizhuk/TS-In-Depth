@@ -1,3 +1,4 @@
+/* eslint-disable no-redeclare */
 import { Category } from './enums';
 import { getObjectProperty, purge } from './function';
 import { Shelf } from './classes';
@@ -74,8 +75,24 @@ function calcTotalPages(): bigint {
 }
 
 console.log(calcTotalPages());
+// lesson number 03.03
 
+function getTitles(author: string): string[];
+function getTitles(available: boolean): string[];
+function getTitles(id: number, available: boolean): string[];
+function getTitles(...args: any[]): string[]{
+    const books = getAllBooks();
+    if( args.length === 1) {
+        const [arg] = args;
+        if(typeof arg === 'string') {
+        } else if(typeof arg === 'boolean') {
+        }
+    } else if(args.length === 2) {
+    }
+    return [];
+}
 
+getTitles('');
 
 // lesson number 5
 class ReferenceItem {
@@ -124,7 +141,6 @@ const test1 = ['1', 2].reduce((acc, item) => {
 }, {});
 
 console.log(test1);
-
 
 // lesson number 07.01
 const inventory = [
