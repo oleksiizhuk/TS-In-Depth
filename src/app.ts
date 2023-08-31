@@ -7,6 +7,7 @@ import { SpecificShelf } from './classes/shelf';
 import { UniversityLibrarian } from './classes/university-librarian';
 import { timeout } from './decorators';
 import { Library } from './classes/Library';
+import * as assert from 'assert';
 
 showHello('greeting', 'TypeScript');
 
@@ -78,24 +79,40 @@ function calcTotalPages(): bigint {
 }
 
 console.log(calcTotalPages());
-// lesson number 03.03
 
-function getTitles(author: string): string[];
-function getTitles(available: boolean): string[];
-function getTitles(id: number, available: boolean): string[];
-function getTitles(...args: any[]): string[]{
-    const books = getAllBooks();
-    if( args.length === 1) {
-        const [arg] = args;
-        if(typeof arg === 'string') {
-        } else if(typeof arg === 'boolean') {
-        }
-    } else if(args.length === 2) {
+// lesson number 03.03 Overload Function
+// function getTitles(author: string): string[];
+// function getTitles(available: boolean): string[];
+// function getTitles(id: number, available: boolean): string[];
+// function getTitles(...args: [string | boolean] | [number, boolean]): string[]{
+//     const books = getAllBooks();
+//     if( args.length === 1) {
+//         const [arg] = args;
+//         if(typeof arg === 'string') {
+//             return books.filter(({ author}) => author === arg).map(({title}) => title);
+//         } else if(typeof arg === 'boolean') {
+//             return books.filter(({ available}) => available === arg).map(({title}) => title);
+//         }
+//     } else if(args.length === 2) {
+//         const [id, available] = args;
+//         if(typeof id === 'number' && typeof available ==='boolean') {
+//             return books.filter(book => book.id === id && book.available === available).map(({title}) => title);
+//         }
+//     }
+//     return [];
+// }
+//
+// const getTitlesResult1 = getTitles('1');
+// const getTitlesResult2 = getTitles(true);
+// const getTitlesResult3 = getTitles(1, true);
+
+// lesson number 03.04 Assertion Function
+
+function assertString(value: any): asserts value is string {
+    if(typeof value !== 'string') {
+        throw new Error('value should have benn a string');
     }
-    return [];
 }
-
-getTitles('');
 
 // lesson number 5
 class ReferenceItem {
