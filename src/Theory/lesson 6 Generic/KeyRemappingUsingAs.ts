@@ -1,4 +1,4 @@
-type Book = {
+type Book6 = {
     title: string;
     author: string;
 };
