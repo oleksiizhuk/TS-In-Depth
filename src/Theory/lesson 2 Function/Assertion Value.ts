@@ -9,4 +9,4 @@ function doSomethingTitle(title: any) {
     return title.toUpperCase();
 }
 
-doSomethingTitle('ad')
+doSomethingTitle('ad');
