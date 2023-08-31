@@ -4,6 +4,9 @@ import { getObjectProperty, purge } from './function';
 import { Shelf } from './classes';
 import { Magazine } from './interface';
 import { SpecificShelf } from './classes/shelf';
+import { UniversityLibrarian } from './classes/university-librarian';
+import { timeout } from './decorators';
+import { Library } from './classes/Library';
 
 showHello('greeting', 'TypeScript');
 
@@ -120,6 +123,8 @@ class ReferenceItem {
     }
 
     static department: string = 'Classical dep.';
+
+    @timeout(5000)
     printTitle (): void {
         console.log(`${this.title} was published in year`, this.year);
         console.log(`Department: ${ReferenceItem.department}`);
@@ -185,4 +190,36 @@ getObjectProperty(magazine[0], 'title');
 getObjectProperty(magazine[0], 'publisher');
 
 
+//  ============== HOMEWORK ==============
+type UpdateResult<T> = T extends true ? string : number;
+export function update<T extends boolean>(p: T): UpdateResult<T> {
+    if(p) {
+        return 'abc' as UpdateResult<T>;
+    }
+    return 10 as UpdateResult<T>;
+}
+
+const r11 = update(true);
+const r22 = update(false);
+//  ============== END HOMEWORK ==============
+
+
+// Lesson 08.01
+
+const librarian = new UniversityLibrarian('');
+librarian.name = 'Anna';
+
+
+const enc = new ReferenceItem('Learn Typescript', 2023, 1);
+enc.printTitle();
+
+
+// Task 08.05
+// const l = new Library();
+// console.log('Library = ', l);
+
+// Task 08.06
+const l = new Library();
+l.name = 'Anna';
+console.log('Library = ', l);
 
