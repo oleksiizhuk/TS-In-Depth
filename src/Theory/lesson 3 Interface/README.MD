@@ -5,3 +5,7 @@
 - [Symbol Index Signatures](Symbol%20Index%20Signatures.ts)
 - [Template String Pattern Index Signatures](Template%20String%20Pattern%20Index%20Signatures.ts)
 - [Indexed Access Types](Indexed%20Access%20Types.ts)
+- [Interfaces for Function Types](Interfaces%20for%20Function%20Types.ts)
+- [Overloaded Arrow Function](Overloaded%20Arrow%20Function.ts)
+- [Interfaces Extending Classes](Interfaces%20Extending%20Classes.ts)
+- [Add New Fields to the Existing Interface](Add%20New%20Fields%20to%20the%20Existing%20Interface.ts)

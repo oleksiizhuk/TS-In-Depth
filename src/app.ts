@@ -16,16 +16,35 @@ function showHello(divName: string, name: string) {
     elt!.innerText = `Hello from ${name}`;
 }
 
-export type Book = {
+// export type Book = {
+//     id: number;
+//     title: string;
+//     category: Category;
+//     author: string;
+//     available: boolean;
+//     test?: string;
+// };
+
+export interface Book {
     id: number;
     title: string;
     category: Category;
     author: string;
     available: boolean;
     test?: string;
-};
+}
+
+function getAllBooks1(): readonly Book[] {
+    const books:  readonly Book[] = <const>[
+        { id: 1, title: 'Refactoring JavaScript', category: Category.JavaScript, author: 'Evan Burchard', available: true},
+        { id: 2, title: 'JavaScript Testing', category: Category.CSS, author: 'Liang Yuxian Eugene', available: false },
+        { id: 3, title: 'CSS Secrets', category: Category.HTML, author: 'Lea Verou', available: true },
+        { id: 4, title: 'Mastering JavaScript Object-Oriented Programming', category: Category.TypeScript, author: 'Andrea Chiarelli', available: true }
+    ];
+    return books;
+}
 function getAllBooks(): Book[] {
-    const books: Book[] = [
+    const books:  Book[] = [
         { id: 1, title: 'Refactoring JavaScript', category: Category.JavaScript, author: 'Evan Burchard', available: true},
         { id: 2, title: 'JavaScript Testing', category: Category.CSS, author: 'Liang Yuxian Eugene', available: false },
         { id: 3, title: 'CSS Secrets', category: Category.HTML, author: 'Lea Verou', available: true },
@@ -76,6 +95,11 @@ function calcTotalPages(): bigint {
     },0n);
 
     return result;
+}
+
+function getBookById (id: Book['id']): Book | undefined {
+    const books = getAllBooks();
+    return books.find((book) => book.id === id);
 }
 
 console.log(calcTotalPages());
