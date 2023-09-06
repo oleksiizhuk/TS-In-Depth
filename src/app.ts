@@ -7,7 +7,6 @@ import { SpecificShelf } from './classes/shelf';
 import { UniversityLibrarian } from './classes/university-librarian';
 import { timeout } from './decorators';
 import { Library } from './classes/Library';
-import * as assert from 'assert';
 
 showHello('greeting', 'TypeScript');
 
@@ -32,6 +31,7 @@ export interface Book {
     author: string;
     available: boolean;
     test?: string;
+    markDamaged?: Function
 }
 
 function getAllBooks1(): readonly Book[] {
@@ -104,7 +104,7 @@ function getBookById (id: Book['id']): Book | undefined {
 
 console.log(calcTotalPages());
 
-// lesson number 03.03 Overload Function
+// task number 03.03 Overload Function
 // function getTitles(author: string): string[];
 // function getTitles(available: boolean): string[];
 // function getTitles(id: number, available: boolean): string[];
@@ -130,7 +130,7 @@ console.log(calcTotalPages());
 // const getTitlesResult2 = getTitles(true);
 // const getTitlesResult3 = getTitles(1, true);
 
-// lesson number 03.04 Assertion Function
+// task number 03.04 Assertion Function
 
 function assertString(value: any): asserts value is string {
     if(typeof value !== 'string') {
@@ -138,7 +138,39 @@ function assertString(value: any): asserts value is string {
     }
 }
 
-// lesson number 5
+// task number 04.04
+const offer: any = {
+    book: {
+        title: 'Essential Typescriptt'
+    }
+};
+// console.log(offer.magazine);
+// console.log(offer.magazine.getTitle.?());
+
+// task number 04.05 Assertion Function
+
+const myBook: Book = {
+    id: 5,
+    title: 'Color, Background and Gradients',
+    author: 'Eric A. Meyer',
+    available: true,
+    category: Category.CSS,
+    markDamaged (reason: string): void {
+        console.log(`Damaged: ${reason}`);
+    }
+};
+type BookProperties = keyof Book;
+const getProperty = (book: Book, prop: BookProperties): any => {
+    if( typeof book[prop] === 'function') {
+        return (book[prop] as Function).name;
+    } else {
+        return book[prop];
+    }
+};
+console.log(getProperty(myBook, 'title'));
+
+
+// task number 5
 class ReferenceItem {
     #id: number;
     constructor(public title: string, private year: number, id: number) {
@@ -188,7 +220,7 @@ const test1 = ['1', 2].reduce((acc, item) => {
 
 console.log(test1);
 
-// lesson number 07.01
+// task number 07.01
 const inventory = [
     { id: 10, title: 'The C Programming Language', author: 'K & R', available: true, category: Category.Software },
     { id: 11, title: 'Code Complete', author: 'Steve McConnell', available: true, category: Category.Software },
@@ -245,7 +277,7 @@ const r22 = update(false);
 //  ============== END HOMEWORK ==============
 
 
-// Lesson 08.01
+// task 08.01
 
 const librarian = new UniversityLibrarian('');
 librarian.name = 'Anna';
@@ -255,11 +287,11 @@ const enc = new ReferenceItem('Learn Typescript', 2023, 1);
 enc.printTitle();
 
 
-// Task 08.05
+// task 08.05
 // const l = new Library();
 // console.log('Library = ', l);
 
-// Task 08.06
+// task 08.06
 const l = new Library();
 l.name = 'Anna';
 console.log('Library = ', l);
