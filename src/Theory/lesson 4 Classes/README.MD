@@ -14,10 +14,14 @@
 - [Private Accessors](Private%20Accessors.ts)
 - [Private Static Members](Private%20Static%20Members.ts)
 
-### ===========
-- [Union Object.ts](Union%20Object.ts)
-- [typeGuardsFunction](typeGuardsFunction.ts)
-- [Satisfies Operator](Satisfies%20Operator.ts)
+### Additional
+- [Union Object.ts](Additional/Union%20Object.ts)
+- [Type Guards Function](Additional%2FType%20Guards%20Function.ts)
+- [Satisfies Operator](Additional/Satisfies%20Operator.ts)
+- [Intersection Object](Additional%2FIntersection%20Object.ts)
+- [Intersection Never](Additional%2FIntersection%20Never.ts)
+- [Operator ?? ](Additional%2FOperator%20%3F%3F.ts)
+- [Short-Circuiting Assignment Operators](Additional%2FShort-Circuiting%20Assignment%20Operators.ts)
 
 
 ### ===========
