@@ -286,9 +286,6 @@ const l = new Library();
 l.name = 'Anna';
 console.log('Library = ', l);
 
-
-
-
 // // task 09.01
 // getBooksByCategory(Category.JavaScript, logCategorySearch);
 //
