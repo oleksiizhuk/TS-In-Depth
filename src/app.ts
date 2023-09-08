@@ -1,6 +1,13 @@
 /* eslint-disable no-redeclare */
 import { Category } from './enums';
-import { getObjectProperty, purge } from './function';
+import {
+    getBooksByCategory,
+    getBooksByCategoryPromise,
+    getObjectProperty,
+    logCategorySearch,
+    logSearchResult,
+    purge
+} from './function';
 import { Shelf } from './classes';
 import { Magazine } from './interface';
 import { SpecificShelf } from './classes/shelf';
@@ -31,7 +38,7 @@ export interface Book {
     author: string;
     available: boolean;
     test?: string;
-    markDamaged?: Function
+    markDamaged?: Function;
 }
 
 function getAllBooks1(): readonly Book[] {
@@ -279,3 +286,25 @@ const l = new Library();
 l.name = 'Anna';
 console.log('Library = ', l);
 
+
+
+
+// // task 09.01
+// getBooksByCategory(Category.JavaScript, logCategorySearch);
+//
+// // task 09.02
+// console.log('Begin');
+// getBooksByCategoryPromise(Category.JavaScript)
+//     .then((titles) => {
+//         console.log(titles);
+//         return Promise.resolve(titles.length);
+//     })
+//     .then(len => console.log(len))
+//     .catch(reason => console.log(reason));
+// console.log('End');
+
+
+// task 09.03
+console.log('Begin');
+logSearchResult(Category.JavaScript).catch(reason => console.log(reason));
+console.log('End');

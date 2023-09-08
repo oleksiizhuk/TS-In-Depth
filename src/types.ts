@@ -1,4 +1,5 @@
 import { Book } from './app';
+import { getBooksByCategoryPromise } from './function';
 
 export type fn = (p1: string, p2: number, p3: boolean) => symbol;
 
@@ -37,3 +38,6 @@ type RemoveProps <T extends object, TProps extends keyof T> = {
 type BookRequiredPropsType = RemoveProps<Book, 'title'>;
 type BookOptionalPropsType = RemoveProps<Book, keyof BookOptionalProps>;
 
+export type Unpromisify<T> = T extends Promise<infer U> ? U : never;
+
+type fnString = Unpromisify<ReturnType<typeof getBooksByCategoryPromise>>;
