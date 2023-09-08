@@ -170,55 +170,38 @@ const getProperty = (book: Book, prop: BookProperties): any => {
 console.log(getProperty(myBook, 'title'));
 
 
-// task number 5
+// task number 05.01
 class ReferenceItem {
     #id: number;
     constructor(public title: string, private year: number, id: number) {
         this.#id = id;
         console.log('Creating a new ReferenceItem...');
     }
-
     getID(): number {
         return this.#id;
     }
-
-
     private _publisher!: string;
-
     get publisher(): string {
         // eslint-disable-next-line no-underscore-dangle
         return this._publisher.toUpperCase();
     }
-
     set publisher(newPublisher ) {
         // eslint-disable-next-line no-underscore-dangle
         this._publisher = newPublisher;
     }
-
     static department: string = 'Classical dep.';
-
     @timeout(5000)
     printTitle (): void {
         console.log(`${this.title} was published in year`, this.year);
         console.log(`Department: ${ReferenceItem.department}`);
         console.log(`Department: ${ReferenceItem.department}`);
         console.log(`Department: ${Object.getPrototypeOf(this).constructor.department}`);
-
     }
 }
 
 const ref = new ReferenceItem( 'Learn Typescript', 2023, 1);
-
 console.log(ref.printTitle());
-
 console.log(ref.getID());
-
-
-const test1 = ['1', 2].reduce((acc, item) => {
-    return { ...acc, item };
-}, {});
-
-console.log(test1);
 
 // task number 07.01
 const inventory = [

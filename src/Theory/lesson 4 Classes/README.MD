@@ -14,8 +14,13 @@
 - [Private Accessors](Private%20Accessors.ts)
 - [Private Static Members](Private%20Static%20Members.ts)
 
+### ===========
+- [Union Object.ts](Union%20Object.ts)
+- [typeGuardsFunction](typeGuardsFunction.ts)
+- [Satisfies Operator](Satisfies%20Operator.ts)
 
 
+### ===========
 # Images
 
 - CLASS MEMBERS
