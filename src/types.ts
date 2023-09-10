@@ -1,4 +1,4 @@
-import { Book } from './app';
+import { Book } from './interface';
 import { getBooksByCategoryPromise } from './function';
 
 export type fn = (p1: string, p2: number, p3: boolean) => symbol;

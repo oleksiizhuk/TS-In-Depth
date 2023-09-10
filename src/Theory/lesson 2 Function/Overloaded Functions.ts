@@ -18,7 +18,7 @@
 
 
 import { Category } from '../../enums';
-import { Book } from '../../app';
+import { Book } from '../../interface';
 
 function getAllBooks(): Book[] {
     const books: Book[] = [

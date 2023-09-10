@@ -1,4 +1,24 @@
+import { Category } from './enums';
 
+
+// export type Book = {
+//     id: number;
+//     title: string;
+//     category: Category;
+//     author: string;
+//     available: boolean;
+//     test?: string;
+// };
+
+interface Book {
+    id: number;
+    title: string;
+    category: Category;
+    author: string;
+    available: boolean;
+    test?: string;
+    markDamaged?: Function;
+}
 interface Magazine {
     title: string;
     publisher: string;
@@ -18,10 +38,11 @@ interface Callback<T> {
 }
 
 export {
+    Book,
     Magazine,
     ShelfItem,
     LibMgrCallback,
-    Callback
+    Callback,
 };
 
 

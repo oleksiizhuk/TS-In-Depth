@@ -38,7 +38,7 @@ abstract class ReferenceItem3 {
     abstract printCitation(): void;
 }
 
-class Encyclopedia1 extends ReferenceItem2 {
+class Encyclopedia1 extends ReferenceItem3 {
     constructor(title: string, year: number, id: number) {
         super(title, year, id);
     }

@@ -1,5 +1,3 @@
-import { Magazine } from '../interface';
-import { Book } from '../app';
 import { ShelfItem } from '../interface';
 
 export default class Shelf<in out T extends ShelfItem>{

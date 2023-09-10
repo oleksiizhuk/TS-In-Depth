@@ -1,4 +1,4 @@
-class ReferenceItem2 {
+class ReferenceItem {
     #id: number;
     constructor(public title: string, protected year: number, id: number) {
         this.#id = id;
@@ -29,15 +29,15 @@ class ReferenceItem2 {
     static department: string = 'Classical dep.';
     printTitle (): void {
         console.log(`${this.title} was published in year`, this.year);
-        console.log(`Department: ${ReferenceItem2.department}`);
-        console.log(`Department: ${ReferenceItem2.department}`);
+        console.log(`Department: ${ReferenceItem.department}`);
+        console.log(`Department: ${ReferenceItem.department}`);
         console.log(`Department: ${Object.getPrototypeOf(this).constructor.department}`);
 
     }
 }
 
 
-class Encyclopedia2 extends ReferenceItem2 {
+class Encyclopedia2 extends ReferenceItem {
     constructor(title: string, year: number, id: number) {
         super(title, year, id);
     }
@@ -51,3 +51,5 @@ const objectEncyclopedia = new Encyclopedia2( 'Learn Typescript', 2023, 1);
 
 console.log(objectEncyclopedia);
 
+
+export { ReferenceItem }
