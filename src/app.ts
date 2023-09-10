@@ -135,6 +135,31 @@ const ref = new ReferenceItem( 'Learn Typescript', 2023, 1);
 console.log(ref.printTitle());
 console.log(ref.getID());
 
+
+// task 06.05
+
+const flag = true;
+if(flag) {
+    // import { Shelf } from './classes'; // ERROR declaration call
+    import('./classes').then(module => {
+        const reader = new module.Reader();
+        reader.name = 'Anna';
+        console.log('reader = ', reader);
+    });
+}
+
+if(flag) {
+    // WORK ONLY AFTER
+    // experiments: {
+    //     topLevelAwait: true
+    // }
+    const module = await import('./classes');
+    const reader = new module.Reader();
+    reader.name = 'Anna';
+    console.log('reader = ', reader);
+
+}
+
 // task number 07.01
 const inventory = [
     { id: 10, title: 'The C Programming Language', author: 'K & R', available: true, category: Category.Software },
