@@ -13,14 +13,15 @@ import {
     logFirstAvailable,
     getAllBooks,
     getBookAuthorByIndex,
-    calcTotalPages
+    calcTotalPages, createCustomer
 } from './function';
 import { Shelf } from './classes';
-import { Magazine, Book } from './interface';
+import { Magazine, Book, BookRequiredFields } from './interface';
 import { SpecificShelf } from './classes/shelf';
 import { UniversityLibrarian } from './classes/university-librarian';
 import { timeout } from './decorators';
 import { Library } from './classes/Library';
+import { BookRequiredFieldsType, UpdateBook } from './types';
 
 
 showHello('greeting', 'TypeScript');
@@ -217,6 +218,19 @@ const r22 = update(false);
 //  ============== END HOMEWORK ==============
 
 
+const bookRequiredFields: BookRequiredFieldsType = {
+    id: 1,
+    title: 'Learn TypeScript',
+    author: 'Anna',
+    available: false,
+    category: Category.TypeScript,
+    pages: 300,
+    markDamaged: (reason: string) => console.log('Damaged')
+};
+
+
+const updatedBook: UpdateBook = {};
+
 // task 08.01
 
 const librarian = new UniversityLibrarian('');
@@ -226,6 +240,8 @@ librarian.name = 'Anna';
 const enc = new ReferenceItem('Learn Typescript', 2023, 1);
 enc.printTitle();
 
+const params: Parameters<typeof createCustomer> = ['Anna', 1];
+createCustomer(...params);
 
 // task 08.05
 // const l = new Library();

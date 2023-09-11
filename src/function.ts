@@ -1,6 +1,9 @@
 import { Category } from './enums';
 import { Book, Callback, LibMgrCallback } from './interface';
 
+export function createCustomer(name: string, id: number): string {
+    return `${name} ${id}`;
+}
 
 export function showHello(divName: string, name: string) {
     const elt = document.getElementById(divName);

@@ -15,3 +15,8 @@ type BookWithTitleAndAuthor2 = {
     author: string;
 };
 
+const modifyBook: BookWithTitleAndAuthor1 = {
+    title: 'string',
+    author: 'string',
+};
+

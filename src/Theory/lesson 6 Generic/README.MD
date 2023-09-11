@@ -30,6 +30,9 @@
 - [Key Remapping Using As](Key%20Remapping%20Using%20As.ts)
 - [Key Remapping Using As Never](Key%20Remapping%20Using%20As%20Never.ts)
 
+### Fourth Part 43 min
+-[Conditional Types](Conditional%20Types.ts)
+
 ### UtilityTypes
 - [Partial<Type>](UtilityTypes%2FPartial%3CType%3E.ts)
 - [Required<Type>](UtilityTypes%2FRequired%3CType%3E.ts)
