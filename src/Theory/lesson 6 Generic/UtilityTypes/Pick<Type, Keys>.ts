@@ -7,4 +7,9 @@ type BookPick = {
     year: string;
 };
 
-type BookWithTitleAndAuthor = Pick<BookPick, 'title'>;
+type BookWithTitleAndAuthor = Pick<BookPick, 'title' | 'author'>;
+
+type bookWithTitleAndAuthor = {
+    title: string;
+    author: string;
+};

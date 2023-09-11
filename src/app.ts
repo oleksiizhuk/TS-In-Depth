@@ -173,7 +173,6 @@ const r1 = purge([1,2,3]);
 const purgeNumbers = purge<number>;
 purgeNumbers([1,2,3]);
 
-
 // Task 07.02
 
 const bookShelf = new Shelf<Book>();
@@ -201,6 +200,7 @@ console.log(magazineShelf.getFirst().title);
 
 getObjectProperty(magazine[0], 'title');
 getObjectProperty(magazine[0], 'publisher');
+getObjectProperty(getAllBooks()[0], 'markDamaged');
 
 
 //  ============== HOMEWORK ==============

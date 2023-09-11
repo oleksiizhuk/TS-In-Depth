@@ -1,6 +1,6 @@
 // делает все поля обезательными
 
-interface Person1 {
+interface PersonReq {
     age?: number;
     id: number;
     location?: string;
@@ -8,8 +8,13 @@ interface Person1 {
 }
 
 
-const p1: Person1 = { // OK
+const p1: PersonReq = { // OK
     id: 1,
     name: 'Anna'
 };
 
+// ERROR
+// const p2: Required<PersonReq> = {
+//     id: 1,
+//     name: 'Anna'
+// }

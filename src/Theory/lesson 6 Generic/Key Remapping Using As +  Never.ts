@@ -8,3 +8,7 @@ interface Person {
 }
 
 type EmailLessPerson = RemoveEmailProperty<Person>;
+
+// type EmailLessPerson = {
+//  name: string;
+// }

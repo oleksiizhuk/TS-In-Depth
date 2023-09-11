@@ -69,14 +69,23 @@ export function getBookById (id: Book['id']): Book | undefined {
 
 
 export function purge<T>(inventory: T[]): T[] {
-    return inventory;
+    return inventory.slice(2);
 }
 
-export function getObjectProperty<TObject extends object, TKey extends keyof TObject>(object: TObject, prop: TKey): TObject[TKey] | string {
-    return object[prop];
-    // if( typeof object[prop] === '') {
-    //
-    // }
+export function getBookProperty<T extends keyof Book>(book: Book, prop: T): Book[T] | string {
+    if(typeof book[prop] === 'function') {
+        return (book[prop] as Function).name;
+    } else {
+        return book[prop];
+    }
+}
+// 07.03
+export function getObjectProperty<TObject extends object, TKey extends keyof TObject>(object: TObject, prop: TKey): TObject[TKey] | string  {
+    if(typeof object[prop] === 'function') {
+        return (object[prop] as Function).name;
+    } else {
+        return object[prop];
+    }
 }
 
 type OptionsFlags<Type> = {
