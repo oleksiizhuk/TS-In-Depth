@@ -39,9 +39,9 @@ type RemoveProps <T extends object, TProps extends keyof T> = {
 type BookRequiredPropsType = RemoveProps<Book, 'title'>;
 type BookOptionalPropsType = RemoveProps<Book, keyof BookOptionalProps>;
 
-export type Unpromisify<T> = T extends Promise<infer U> ? U : never;
+export type UnPromisify<T> = T extends Promise<infer U> ? U : never;
 
-type fnString = Unpromisify<ReturnType<typeof getBooksByCategoryPromise>>;
+type fnString = UnPromisify<ReturnType<typeof getBooksByCategoryPromise>>;
 
 export type BookRequiredFieldsType = Required<Omit<Book, 'test'>>& {pages: number};
 export type UpdateBook = Partial<Book>;
