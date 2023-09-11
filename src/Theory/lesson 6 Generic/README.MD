@@ -30,8 +30,14 @@
 - [Key Remapping Using As](Key%20Remapping%20Using%20As.ts)
 - [Key Remapping Using As Never](Key%20Remapping%20Using%20As%20Never.ts)
 
-### Fourth Part 43 min
--[Conditional Types](Conditional%20Types.ts)
+### Fourth Part video 2 43 min
+- [Conditional Types](Conditional%20Types.ts)
+- [Distributive Conditional Types](Distributive%20Conditional%20Types.ts)
+- [infer Keyword.ts](inref%20Keyword.ts)
+- [Recursive Conditional Types](Recursive%20Conditional%20Types.ts)
+- [Extends Constraints on infer Type Variables](Extends%20Constraints%20on%20infer%20Type%20Variables.ts)
+- [Inference for infer in Template String Types](Inference%20for%20infer%20in%20Template%20String%20Types.ts)
+- [Mapped Types Conditional Types](Mapped%20Types%20Conditional%20Types.ts)
 
 ### UtilityTypes
 - [Partial<Type>](UtilityTypes%2FPartial%3CType%3E.ts)
