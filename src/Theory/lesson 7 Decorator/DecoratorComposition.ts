@@ -7,8 +7,8 @@ function decorator1(){
 }
 
 function decorator2() {
-  console.log('decorator2 evaluated');
-  return function () {
+    console.log('decorator2 evaluated');
+    return function () {
 
-  }
+    };
 }
